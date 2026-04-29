@@ -1,6 +1,4 @@
-#!/usr/bin/env node
-
-import { Command } from "commander"
+imprt { Command } from "commander"
 import chalk from "chalk"
 import {
   createSession,
