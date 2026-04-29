@@ -40,16 +40,8 @@ const sessionSchema = z.object({
   updatedAt: z.string()
 })
 
-function getBaseDir(): string {
-  return path.join(os.homedir(), ".cprep")
-}
-
-function getSessionsDir(): string {
-  return path.join(getBaseDir(), "sessions")
-}
-
 function getSessionPath(name: string): string {
-  return path.join(getSessionsDir(), `${name}.json`)
+  return path.join(os.homedir(), ".cprep", "sessions", `${name}.json`)
 }
 
 export async function ensureStore(): Promise<void> {
