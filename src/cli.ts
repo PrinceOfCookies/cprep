@@ -1,4 +1,4 @@
-imprt { Command } from "commander"
+import { Command } from "commander"
 import chalk from "chalk"
 import {
   createSession,
